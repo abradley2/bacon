@@ -22,11 +22,13 @@
     "backbone": "^1.3.3",
     "backbone-view-mediator": "^1.1.0",
     "baconjs": "^0.7.85",
+    "handlebars": "^4.0.5",
     "jquery": "^3.1.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
     "browserify": "^13.1.0",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "babelify": "^7.3.0"
   }
 }
