@@ -27,6 +27,9 @@ gulp.task('watch-styles', function () {
 gulp.task('build-scripts', function () {
     var b = browserify([scripts.entry])
         .transform('babelify', {presets: ["es2015"]})
+        .transform('stringify', {
+          appliesTo: { includeExtensions: ['.md', '.html'] }
+        })
         .on('log', gutil.log)
         .bundle()
         .on('error', gutil.log)
@@ -39,6 +42,9 @@ gulp.task('watch-scripts', function () {
         .on('log', gutil.log)
         .plugin([watchify])
         .transform('babelify', {presets: ["es2015"]})
+        .transform('stringify', {
+          appliesTo: { includeExtensions: ['.md', '.html'] }
+        })
 
     var bundle = function () {
         b.bundle()

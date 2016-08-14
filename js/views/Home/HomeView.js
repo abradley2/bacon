@@ -1,14 +1,12 @@
 import _ from 'underscore'
 import $ from 'jquery'
 import Backbone from 'backbone'
-import html from '../fn/html'
+import hbs from 'handlebars'
+import template from './HomeTemplate.html'
 
 export default Backbone.View.extend({
 
-    template: (html`<div>
-        <h3>About Page</h3>
-        <a href='/' data-link>Home</a>
-    </div>`),
+    template: hbs.compile(template),
 
     initialize: function () {
 
@@ -16,7 +14,7 @@ export default Backbone.View.extend({
 
     render: function () {
         this.$el.html(
-            this.template()
+            this.template({message: 'Better Backbone Boilerplate'})
         )
     },
 

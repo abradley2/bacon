@@ -1,7 +1,7 @@
 import Backbone from 'backbone'
 import BackboneViewMediator from 'backbone-view-mediator'
-import HomeView from './views/HomeView'
-import AboutView from './views/AboutView'
+import HomeView from './views/Home/HomeView'
+import AboutView from './views/About/AboutView'
 
 const viewMediator = new BackboneViewMediator({
     el: 'body',
