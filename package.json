@@ -5,7 +5,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-scripts": "gulp build-scripts",
-    "watch-scripts": "gulp watch-scripts"
+    "watch-scripts": "gulp watch-scripts",
+    "build-styles": "sass ./scss ./public/dist/css",
+    "watch-styles": "sass --watch ./scss ./public/dist/css"
   },
   "repository": {
     "type": "git",
